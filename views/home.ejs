@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API de Notícias</title>
+
+    <!-- Bootstrap -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+
+    <style>
+        .header {
+            background: linear-gradient(45deg, #0d6efd, #0b5ed7);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .info-box {
+            border-left: 5px solid #0d6efd;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">API Notícias</a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="header mb-4">
+        <div class="container">
+            <h1>Bem-vindo à API de Notícias</h1>
+            <p class="lead">Acesso aos dados do nosso sistema por meio da rota /noticias</p>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <div class="container mb-5">
+
+        <!-- Sobre a API -->
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h4 class="card-title">📡 O que é esta API?</h4>
+                <p class="card-text">
+                    Esta aplicação fornece acesso às notícias cadastradas em nosso sistema.
+                    A API está hospedada em outro servidor e pode ser consumida através da rota:
+                </p>
+
+                <div class="alert alert-primary">
+                    <strong>GET /noticias</strong>
+                </div>
+
+                <p>
+                    Ela retorna uma lista de notícias em formato JSON, permitindo integração
+                    com sites, aplicativos, dashboards e outras aplicações.
+                </p>
+            </div>
+        </div>
+
+        <!-- Exemplo de retorno -->
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h4 class="card-title">📄 Exemplo de Resposta</h4>
+                <pre class="bg-dark text-white p-3 rounded">
+{
+  "titulo": "Exemplo de Notícia",
+  "descricao": "Descrição da notícia...",
+  "data": "2025-01-01T12:00:00Z"
+}
+                </pre>
+            </div>
+        </div>
+
+        <!-- Informações adicionais -->
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h4 class="card-title">📘 Como utilizar?</h4>
+                <p class="card-text">
+                    Você pode usar ferramentas como Postman, Insomnia ou qualquer linguagem
+                    que faça requisições HTTP para consumir a API.
+                </p>
+
+                <div class="info-box">
+                    <p><strong>Endpoint principal:</strong> /noticias</p>
+                    <p><strong>Formato:</strong> JSON</p>
+                    <p><strong>Métodos suportados:</strong> GET</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center p-3">
+        API de Notícias – © 2025
+    </footer>
+
+</body>
+</html>
